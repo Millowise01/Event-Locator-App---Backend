@@ -193,7 +193,4 @@ i18next.init({
   }
 });
 
-// Middleware for Express
-const i18nMiddleware = new middleware.LanguageDetector();
-
-module.exports = { i18next, i18nMiddleware };
+module.exports = { i18next, i18nMiddleware: middleware };

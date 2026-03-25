@@ -24,8 +24,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // i18n middleware
-app.use(i18nMiddleware.detect());
-app.use(i18next.handler);
+app.use(i18nMiddleware.handle(i18next));
 
 // Request logging middleware
 app.use((req, res, next) => {
