@@ -112,16 +112,15 @@ describe('AuthService', () => {
   });
 
   describe('verifyToken', () => {
-    it('should verify valid token', async () => {
+    it('should verify valid token', () => {
       const token = authService.generateToken('12345');
-      const decoded = await authService.verifyToken(token);
+      const decoded = authService.verifyToken(token);
 
       expect(decoded.userId).toBe('12345');
     });
 
-    it('should throw error for invalid token', async () => {
-      await expect(authService.verifyToken('invalid.token.here'))
-        .rejects
+    it('should throw error for invalid token', () => {
+      expect(() => authService.verifyToken('invalid.token.here'))
         .toThrow('Invalid or expired token');
     });
   });
