@@ -1,44 +1,34 @@
-/**
- * Authentication Middleware
- * Verifies JWT tokens and attaches user data to requests
- */
-
-const jwt = require('jsonwebtoken');
 const logger = require('../config/logger');
 
 /**
- * Middleware to verify JWT token
+ * Global error handler middleware
  */
-function authenticateToken(req, res, next) {
-  try {
-    const authHeader = req.headers.authorization;
-    const token = authHeader && authHeader.split(' ')[1];
+function globalErrorHandler(err, req, res, next) {
+  logger.error({
+    message: err.message,
+    stack: err.stack,
+    path: req.path,
+    method: req.method,
+  });
 
-    if (!token) {
-      return res.status(401).json({
-        success: false,
-        message: req.i18n.t('auth.unauthorized'),
-      });
-    }
+  const statusCode = err.statusCode || 500;
+  const message = err.message || 'Internal server error';
 
-    jwt.verify(token, process.env.JWT_SECRET, (err, decoded) => {
-      if (err) {
-        logger.error('Token verification failed:', err.message);
-        return res.status(401).json({
-          success: false,
-          message: req.i18n.t('auth.token_invalid'),
-        });
-      }
-      req.userId = decoded.userId;
-      next();
-    });
-  } catch (error) {
-    logger.error('Authentication error:', error.message);
-    res.status(401).json({
-      success: false,
-      message: req.i18n.t('auth.unauthorized'),
-    });
-  }
+  res.status(statusCode).json({
+    success: false,
+    message,
+    ...(process.env.NODE_ENV === 'development' && { stack: err.stack }),
+  });
 }
 
-module.exports = { authenticateToken };
+/**
+ * Not Found middleware
+ */
+function notFoundHandler(req, res) {
+  res.status(404).json({
+    success: false,
+    message: req.i18n?.t('not_found') || 'Resource not found',
+  });
+}
+
+module.exports = { globalErrorHandler, notFoundHandler };

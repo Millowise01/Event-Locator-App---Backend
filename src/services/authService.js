@@ -5,7 +5,7 @@
 
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
-const db = require('../config/db');
+const { db } = require('../database/connection');
 const logger = require('../config/logger');
 const { v4: uuidv4 } = require('uuid');
 

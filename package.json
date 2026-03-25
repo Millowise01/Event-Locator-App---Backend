@@ -1,0 +1,49 @@
+{
+  "name": "event-locator-backend",
+  "version": "1.0.0",
+  "description": "Multi-user event locator backend with geospatial search, i18n, and Redis notifications",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "test": "jest --testPathPattern=tests/services --forceExit",
+    "test:integration": "jest --testPathPattern=tests/integration --forceExit",
+    "test:all": "jest --forceExit",
+    "test:coverage": "jest --coverage --forceExit",
+    "migrate": "node src/database/migrate.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "express-validator": "^7.2.0",
+    "helmet": "^7.1.0",
+    "i18next": "^23.11.5",
+    "i18next-http-middleware": "^3.6.0",
+    "jsonwebtoken": "^9.0.2",
+    "pg-promise": "^11.9.1",
+    "redis": "^4.6.14",
+    "uuid": "^9.0.1",
+    "winston": "^3.13.0"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "nodemon": "^3.1.4",
+    "supertest": "^7.0.0"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "setupFiles": [
+      "<rootDir>/src/tests/setup.js"
+    ],
+    "testMatch": [
+      "**/tests/**/*.test.js"
+    ],
+    "collectCoverageFrom": [
+      "src/services/**/*.js",
+      "src/middleware/**/*.js",
+      "src/utils/**/*.js"
+    ]
+  }
+}
