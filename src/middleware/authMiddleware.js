@@ -17,7 +17,7 @@ function authenticateToken(req, res, next) {
     if (!token) {
       return res.status(401).json({
         success: false,
-        message: req.i18n?.t('auth.unauthorized') || 'Unauthorized',
+        message: req.t ? req.t('auth.unauthorized') : 'Unauthorized',
       });
     }
 
@@ -26,7 +26,7 @@ function authenticateToken(req, res, next) {
         logger.error('Token verification failed:', err.message);
         return res.status(401).json({
           success: false,
-          message: req.i18n?.t('auth.unauthorized') || 'Invalid token',
+          message: req.t ? req.t('auth.unauthorized') : 'Invalid token',
         });
       }
       req.userId = decoded.userId;
@@ -37,7 +37,7 @@ function authenticateToken(req, res, next) {
     logger.error('Authentication error:', error.message);
     res.status(401).json({
       success: false,
-      message: req.i18n?.t('auth.unauthorized') || 'Unauthorized',
+      message: req.t ? req.t('auth.unauthorized') : 'Unauthorized',
     });
   }
 }

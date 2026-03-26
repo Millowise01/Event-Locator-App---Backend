@@ -149,7 +149,7 @@ describe('AuthService', () => {
         first_name: 'Johnny', last_name: 'Doe', preferred_language: 'es'
       });
       const result = await authService.updateUserProfile('12345', {
-        first_name: 'Johnny', preferred_language: 'es'
+        firstName: 'Johnny', preferredLanguage: 'es'
       });
       expect(result.first_name).toBe('Johnny');
     });

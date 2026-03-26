@@ -141,19 +141,21 @@ class AuthService {
    * Update user profile
    */
   async updateUserProfile(userId, updates) {
-    const allowedFields = [
-      'first_name',
-      'last_name',
-      'phone',
-      'preferred_language',
-    ];
+    // Map camelCase request fields to snake_case DB columns
+    const fieldMap = {
+      firstName: 'first_name',
+      lastName: 'last_name',
+      phone: 'phone',
+      preferredLanguage: 'preferred_language',
+    };
     const updateSet = [];
     const values = [];
     let paramCount = 1;
 
     for (const [key, value] of Object.entries(updates)) {
-      if (allowedFields.includes(key) && value !== undefined) {
-        updateSet.push(`${key} = $${paramCount}`);
+      const dbField = fieldMap[key];
+      if (dbField && value !== undefined) {
+        updateSet.push(`${dbField} = $${paramCount}`);
         values.push(value);
         paramCount++;
       }

@@ -42,13 +42,23 @@ class UserService {
    * @returns {Promise<Object>} Updated preferences
    */
   async updateUserPreferences(userId, updates) {
-    const allowedFields = ['search_radius_km', 'notification_enabled', 'newsletters_enabled'];
+    // Map camelCase request fields to snake_case DB columns
+    const fieldMap = {
+      searchRadiusKm: 'search_radius_km',
+      notificationEnabled: 'notification_enabled',
+      newslettersEnabled: 'newsletters_enabled',
+      // also accept snake_case directly
+      search_radius_km: 'search_radius_km',
+      notification_enabled: 'notification_enabled',
+      newsletters_enabled: 'newsletters_enabled',
+    };
     const updateFields = [];
     const params = [userId];
 
     for (const [key, value] of Object.entries(updates)) {
-      if (allowedFields.includes(key)) {
-        updateFields.push(`${key} = $${params.length + 1}`);
+      const dbField = fieldMap[key];
+      if (dbField) {
+        updateFields.push(`${dbField} = $${params.length + 1}`);
         params.push(value);
       }
     }

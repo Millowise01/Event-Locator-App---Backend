@@ -2,11 +2,13 @@
     "cSpell.words": [
         "geospatial",
         "indexdef",
+        "newpassword",
         "ossp",
         "postgis",
         "relname",
         "tablename",
         "tgname",
-        "tgrelid"
+        "tgrelid",
+        "uuidv"
     ]
 }

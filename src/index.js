@@ -6,6 +6,7 @@ const { i18next, i18nMiddleware } = require('./config/i18n');
 const logger = require('./config/logger');
 const { initializeDatabase } = require('./database/schema');
 const { seedCategories } = require('./database/seeds');
+const notificationService = require('./services/notificationService');
 
 // Import routes
 const authRoutes = require('./routes/authRoutes');
@@ -53,17 +54,16 @@ app.get('/api/health', (req, res) => {
 app.use((req, res) => {
   res.status(404).json({
     success: false,
-    message: req.i18n.t('not_found')
+    message: req.t('not_found')
   });
 });
 
 // Error handling middleware
 app.use((err, req, res, next) => {
   logger.error('Unhandled error:', err);
-
   res.status(err.status || 500).json({
     success: false,
-    message: err.message || req.i18n.t('error'),
+    message: err.message || req.t('error'),
     error: process.env.NODE_ENV === 'production' ? {} : err
   });
 });
@@ -78,6 +78,9 @@ async function startServer() {
 
     // Seed categories
     await seedCategories();
+
+    // Initialize Redis for notifications (optional — app runs without it)
+    await notificationService.initialize();
 
     const PORT = process.env.PORT || 3000;
     app.listen(PORT, () => {
