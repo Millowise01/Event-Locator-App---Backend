@@ -152,6 +152,49 @@ describe('NotificationService', () => {
     });
   });
 
+  describe('createNotification with Redis initialized', () => {
+    it('should publish to Redis when initialized', async () => {
+      const mockClient = {
+        publish: jest.fn().mockResolvedValue(1)
+      };
+      notificationService.initialized = true;
+      notificationService.client = mockClient;
+
+      db.one.mockResolvedValueOnce({
+        id: 'notif1', user_id: 'user1', type: 'test',
+        title: 'T', message: 'M', read: false, created_at: new Date()
+      });
+
+      await notificationService.createNotification('user1', {
+        eventId: 'evt1', type: 'test', title: 'T', message: 'M'
+      });
+
+      expect(mockClient.publish).toHaveBeenCalledWith(
+        'user:user1:notifications', expect.any(String)
+      );
+
+      notificationService.initialized = false;
+      notificationService.client = null;
+    });
+  });
+
+  describe('cleanupOldNotifications', () => {
+    it('should delete old read notifications', async () => {
+      db.result.mockResolvedValueOnce({ rowCount: 3 });
+      const count = await notificationService.cleanupOldNotifications();
+      expect(count).toBe(3);
+    });
+  });
+
+  describe('subscribeToNotifications', () => {
+    it('should warn when Redis is not initialized', async () => {
+      const consoleSpy = jest.spyOn(console, 'warn').mockImplementation(() => {});
+      await notificationService.subscribeToNotifications('user1', jest.fn());
+      expect(consoleSpy).toHaveBeenCalledWith('Redis not available for subscriptions');
+      consoleSpy.mockRestore();
+    });
+  });
+
   describe('publishEventNotification', () => {
     it('should warn when Redis is not initialized', async () => {
       const consoleSpy = jest.spyOn(console, 'warn').mockImplementation(() => {});

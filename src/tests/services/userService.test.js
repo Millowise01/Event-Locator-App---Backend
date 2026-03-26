@@ -8,6 +8,63 @@ describe('UserService', () => {
     jest.clearAllMocks();
   });
 
+  describe('updateUserPreferences', () => {
+    it('should update preferences successfully', async () => {
+      db.one.mockResolvedValueOnce({
+        id: 'pref1', user_id: 'user123',
+        search_radius_km: 25, notification_enabled: false, newsletters_enabled: true
+      });
+      const result = await userService.updateUserPreferences('user123', {
+        search_radius_km: 25, notification_enabled: false
+      });
+      expect(result.search_radius_km).toBe(25);
+    });
+
+    it('should throw error if no valid fields', async () => {
+      await expect(userService.updateUserPreferences('user123', { invalid: true }))
+        .rejects.toThrow('No valid fields to update');
+    });
+  });
+
+  describe('getFavoriteEvents', () => {
+    it('should return favorite events', async () => {
+      db.any.mockResolvedValueOnce([
+        { id: 'evt1', title: 'Event 1', favorited_at: new Date() }
+      ]);
+      const result = await userService.getFavoriteEvents('user123');
+      expect(Array.isArray(result)).toBe(true);
+      expect(result.length).toBe(1);
+    });
+  });
+
+  describe('getUserAttendingEvents', () => {
+    it('should return attending events', async () => {
+      db.any.mockResolvedValueOnce([
+        { id: 'evt1', title: 'Event 1', status: 'registered' }
+      ]);
+      const result = await userService.getUserAttendingEvents('user123');
+      expect(Array.isArray(result)).toBe(true);
+    });
+  });
+
+  describe('addToFavorites duplicate error', () => {
+    it('should throw already in favorites on duplicate key', async () => {
+      db.oneOrNone.mockResolvedValueOnce({ id: 'evt1' });
+      db.none.mockRejectedValueOnce(new Error('duplicate key value'));
+      await expect(userService.addToFavorites('user123', 'evt1'))
+        .rejects.toThrow('Event already in favorites');
+    });
+  });
+
+  describe('registerForEvent duplicate error', () => {
+    it('should throw already registered on duplicate key', async () => {
+      db.oneOrNone.mockResolvedValueOnce({ id: 'evt1', max_attendees: 100, current_attendees: 5 });
+      db.none.mockRejectedValueOnce(new Error('duplicate key value'));
+      await expect(userService.registerForEvent('user123', 'evt1'))
+        .rejects.toThrow('Already registered for this event');
+    });
+  });
+
   describe('getUserPreferences', () => {
     it('should get user preferences', async () => {
       const userId = 'user123';

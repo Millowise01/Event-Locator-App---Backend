@@ -9,6 +9,84 @@ describe('EventService', () => {
     jest.clearAllMocks();
   });
 
+  describe('createEvent without categories', () => {
+    it('should create event with no categoryIds', async () => {
+      db.one.mockResolvedValueOnce({ id: 'evt1', title: 'Event', created_at: new Date() });
+      db.none.mockResolvedValue();
+      const result = await eventService.createEvent('user1', {
+        title: 'Event', latitude: 40.71, longitude: -74.00,
+        startDate: '2025-01-01T10:00:00Z', endDate: '2025-01-01T18:00:00Z'
+      });
+      expect(result.id).toBe('evt1');
+    });
+  });
+
+  describe('searchEventsByLocation with filters', () => {
+    it('should search with category and date filters', async () => {
+      db.any.mockResolvedValueOnce([{ id: 'evt1', distance_km: 2 }]);
+      const events = await eventService.searchEventsByLocation(40.71, -74.00, 50, {
+        categoryIds: ['cat1'],
+        startDate: '2025-01-01',
+        endDate: '2025-12-31'
+      });
+      expect(events.length).toBe(1);
+    });
+  });
+
+  describe('searchEvents with filters', () => {
+    it('should search text with category and date filters', async () => {
+      db.any.mockResolvedValueOnce([{ id: 'evt1', title: 'Tech Event' }]);
+      const events = await eventService.searchEvents('tech', {
+        categoryIds: ['cat1'],
+        startDate: '2025-01-01'
+      });
+      expect(events.length).toBe(1);
+    });
+  });
+
+  describe('updateEvent edge cases', () => {
+    it('should throw if event not found', async () => {
+      db.oneOrNone.mockResolvedValueOnce(null);
+      await expect(eventService.updateEvent('evt1', 'user1', { title: 'X' }))
+        .rejects.toThrow('Event not found');
+    });
+
+    it('should throw if no valid fields to update', async () => {
+      db.oneOrNone.mockResolvedValueOnce({ creator_id: 'user1' });
+      await expect(eventService.updateEvent('evt1', 'user1', { invalid_field: 'x' }))
+        .rejects.toThrow('No valid fields to update');
+    });
+  });
+
+  describe('deleteEvent edge cases', () => {
+    it('should throw if event not found', async () => {
+      db.oneOrNone.mockResolvedValueOnce(null);
+      await expect(eventService.deleteEvent('evt1', 'user1'))
+        .rejects.toThrow('Event not found');
+    });
+  });
+
+  describe('getUserEvents', () => {
+    it('should return events created by user', async () => {
+      db.any.mockResolvedValueOnce([
+        { id: 'evt1', title: 'My Event', created_at: new Date() }
+      ]);
+      const result = await eventService.getUserEvents('user1');
+      expect(Array.isArray(result)).toBe(true);
+      expect(result.length).toBe(1);
+    });
+  });
+
+  describe('getEventById with null rating', () => {
+    it('should handle null avg_rating gracefully', async () => {
+      db.oneOrNone.mockResolvedValueOnce({ id: 'evt1', title: 'Event' });
+      db.any.mockResolvedValueOnce([]);
+      db.oneOrNone.mockResolvedValueOnce({ avg_rating: null, review_count: 0 });
+      const result = await eventService.getEventById('evt1');
+      expect(result.averageRating).toBe('0.00');
+    });
+  });
+
   describe('createEvent', () => {
     it('should create event successfully', async () => {
       const creatorId = 'user123';

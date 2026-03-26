@@ -125,6 +125,49 @@ describe('AuthService', () => {
     });
   });
 
+  describe('getUserById', () => {
+    it('should return user by id', async () => {
+      db.oneOrNone.mockResolvedValueOnce({
+        id: '12345', email: 'test@example.com', first_name: 'John',
+        last_name: 'Doe', preferred_language: 'en', is_active: true
+      });
+      const result = await authService.getUserById('12345');
+      expect(result.id).toBe('12345');
+    });
+
+    it('should throw error if user not found', async () => {
+      db.oneOrNone.mockResolvedValueOnce(null);
+      await expect(authService.getUserById('nonexistent'))
+        .rejects.toThrow('User not found');
+    });
+  });
+
+  describe('updateUserProfile', () => {
+    it('should update profile successfully', async () => {
+      db.one.mockResolvedValueOnce({
+        id: '12345', email: 'test@example.com',
+        first_name: 'Johnny', last_name: 'Doe', preferred_language: 'es'
+      });
+      const result = await authService.updateUserProfile('12345', {
+        first_name: 'Johnny', preferred_language: 'es'
+      });
+      expect(result.first_name).toBe('Johnny');
+    });
+
+    it('should throw error if no valid fields', async () => {
+      await expect(authService.updateUserProfile('12345', { invalid_field: 'x' }))
+        .rejects.toThrow('No valid fields to update');
+    });
+  });
+
+  describe('updateUserLocation', () => {
+    it('should update user location', async () => {
+      db.one.mockResolvedValueOnce({ id: '12345', latitude: 40.71, longitude: -74.00 });
+      const result = await authService.updateUserLocation('12345', 40.71, -74.00);
+      expect(result.id).toBe('12345');
+    });
+  });
+
   describe('changePassword', () => {
     it('should change password successfully', async () => {
       const userId = '12345';

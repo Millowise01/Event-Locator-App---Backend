@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">51.35% </span>
+                <span class="strong">60.81% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>38/74</span>
+                <span class='fraction'>45/74</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">38.46% </span>
+                <span class="strong">53.84% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>10/26</span>
+                <span class='fraction'>14/26</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">60% </span>
+                <span class="strong">73.33% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>9/15</span>
+                <span class='fraction'>11/15</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">52.77% </span>
+                <span class="strong">62.5% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>38/72</span>
+                <span class='fraction'>45/72</span>
             </div>
         
             
@@ -403,28 +403,28 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -540,9 +540,9 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -625,14 +625,14 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -700,9 +700,9 @@ class NotificationService {
     );
 &nbsp;
     // Publish to Redis for real-time updates
-    <span class="missing-if-branch" title="if path not taken" >I</span>if (this.initialized &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >this.client)</span> {
-<span class="cstat-no" title="statement not covered" >      try {</span>
-<span class="cstat-no" title="statement not covered" >        await this.client.publish(</span>
+    if (this.initialized &amp;&amp; this.client) {
+      try {
+        await this.client.publish(
           `user:${userId}:notifications`,
           JSON.stringify(notification)
         );
@@ -826,10 +826,10 @@ class NotificationService {
    * @param {Function} callback - Callback function for notifications
    * @returns {Promise&lt;void&gt;}
    */
-<span class="fstat-no" title="function not covered" >  as</span>ync subscribeToNotifications(userId, callback) {
-<span class="cstat-no" title="statement not covered" >    if (!this.initialized || !this.subscriber) {</span>
-<span class="cstat-no" title="statement not covered" >      console.warn('Redis not available for subscriptions');</span>
-<span class="cstat-no" title="statement not covered" >      return;</span>
+  async subscribeToNotifications(userId, callback) {
+    <span class="missing-if-branch" title="else path not taken" >E</span>if (!this.initialized || <span class="branch-1 cbranch-no" title="branch not covered" >!this.subscriber)</span> {
+      console.warn('Redis not available for subscriptions');
+      return;
     }
 &nbsp;
 <span class="cstat-no" title="statement not covered" >    try {</span>
@@ -911,15 +911,15 @@ class NotificationService {
    * Clean up old notifications (older than 30 days)
    * @returns {Promise&lt;number&gt;} Number of deleted notifications
    */
-<span class="fstat-no" title="function not covered" >  as</span>ync cleanupOldNotifications() {
-    const result = <span class="cstat-no" title="statement not covered" >await db.result(</span>
+  async cleanupOldNotifications() {
+    const result = await db.result(
       `DELETE FROM notifications 
        WHERE created_at &lt; NOW() - INTERVAL '30 days'
        AND read = TRUE`,
       []
     );
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    return result.rowCount;</span>
+    return result.rowCount;
   }
 }
 &nbsp;
@@ -931,7 +931,7 @@ module.exports = new NotificationService();
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2026-03-26T08:37:00.999Z
+                at 2026-03-26T09:33:34.476Z
             </div>
         <script src="../prettify.js"></script>
         <script>
