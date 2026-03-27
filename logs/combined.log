@@ -601,3 +601,11 @@
 {"level":"info","message":"User logged in: l.carew@alustudent.com","service":"event-locator-backend","timestamp":"2026-03-27 13:57:46"}
 {"level":"info","message":"User logged in: l.carew@alustudent.com","service":"event-locator-backend","timestamp":"2026-03-27 13:57:46"}
 {"level":"info","message":"GET /api/auth/login","service":"event-locator-backend","timestamp":"2026-03-27 13:58:35"}
+{"level":"info","message":"POST /api/auth/register","service":"event-locator-backend","timestamp":"2026-03-27 17:13:26"}
+{"0":"U","1":"s","10":"t","11":"h","12":"i","13":"s","14":" ","15":"e","16":"m","17":"a","18":"i","19":"l","2":"e","20":" ","21":"a","22":"l","23":"r","24":"e","25":"a","26":"d","27":"y","28":" ","29":"e","3":"r","30":"x","31":"i","32":"s","33":"t","34":"s","4":" ","5":"w","6":"i","7":"t","8":"h","9":" ","level":"error","message":"Registration error:","service":"event-locator-backend","timestamp":"2026-03-27 17:13:27"}
+{"level":"info","message":"POST /api/auth/login","service":"event-locator-backend","timestamp":"2026-03-27 17:16:39"}
+{"level":"info","message":"User logged in: l.carew@alustudent.com","service":"event-locator-backend","timestamp":"2026-03-27 17:16:39"}
+{"level":"info","message":"User logged in: l.carew@alustudent.com","service":"event-locator-backend","timestamp":"2026-03-27 17:16:39"}
+{"level":"info","message":"POST /api/auth/login","service":"event-locator-backend","timestamp":"2026-03-27 17:17:15"}
+{"level":"info","message":"User logged in: l.carew@alustudent.com","service":"event-locator-backend","timestamp":"2026-03-27 17:17:15"}
+{"level":"info","message":"User logged in: l.carew@alustudent.com","service":"event-locator-backend","timestamp":"2026-03-27 17:17:15"}
