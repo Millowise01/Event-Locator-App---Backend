@@ -182,7 +182,6 @@ Jest was selected as the testing framework for its zero-config setup, built-in m
 
 The schema is fully normalized (3NF) with PostGIS geospatial support.
 
-```
 users
   id (UUID PK), email (UNIQUE), password_hash, first_name, last_name,
   phone, location (GEOGRAPHY POINT), preferred_language, is_active
@@ -205,9 +204,9 @@ event_reviews             [user_id + event_id UNIQUE, rating 1–5]
 favorite_events           [junction: users ↔ events]
 user_category_preferences [junction: users ↔ categories]
 notifications             [user_id FK, event_id FK, type, read]
-```
 
 Indexes:
+
 - `GIST` indexes on `events.location` and `users.location` for spatial queries
 - Standard B-tree indexes on foreign keys, email, dates, and notification read status
 

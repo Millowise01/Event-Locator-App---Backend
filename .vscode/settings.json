@@ -1,14 +1,23 @@
 {
     "cSpell.words": [
+        "Anmeldung",
+        "contraseña",
+        "erfolgreich",
+        "favorited",
         "geospatial",
         "indexdef",
+        "inválidos",
         "newpassword",
         "ossp",
         "postgis",
+        "psql",
         "relname",
+        "schemaname",
         "tablename",
         "tgname",
         "tgrelid",
-        "uuidv"
+        "uuidv",
+        "wrongpassword",
+        "ZADD"
     ]
 }

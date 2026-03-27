@@ -389,3 +389,215 @@
 {"level":"info","message":"POST /api/auth/login","service":"event-locator-backend","timestamp":"2026-03-26 16:31:29"}
 {"0":"I","1":"n","10":"a","11":"i","12":"l","13":" ","14":"o","15":"r","16":" ","17":"p","18":"a","19":"s","2":"v","20":"s","21":"w","22":"o","23":"r","24":"d","3":"a","4":"l","5":"i","6":"d","7":" ","8":"e","9":"m","level":"error","message":"Login error:","service":"event-locator-backend","timestamp":"2026-03-26 16:31:29"}
 {"level":"info","message":"GET /api/categories","service":"event-locator-backend","timestamp":"2026-03-26 16:31:29"}
+{"level":"info","message":"GET /api/health","service":"event-locator-backend","timestamp":"2026-03-27 11:21:04"}
+{"level":"info","message":"GET /favicon.ico","service":"event-locator-backend","timestamp":"2026-03-27 11:21:05"}
+{"level":"info","message":"GET /api/health","service":"event-locator-backend","timestamp":"2026-03-27 11:22:19"}
+{"level":"info","message":"POST /api/auth/register","service":"event-locator-backend","timestamp":"2026-03-27 11:22:19"}
+{"level":"info","message":"User registered: test@example.com","service":"event-locator-backend","timestamp":"2026-03-27 11:22:19"}
+{"level":"info","message":"POST /api/auth/register","service":"event-locator-backend","timestamp":"2026-03-27 11:22:19"}
+{"level":"info","message":"POST /api/auth/register","service":"event-locator-backend","timestamp":"2026-03-27 11:22:19"}
+{"0":"U","1":"s","10":"t","11":"h","12":"i","13":"s","14":" ","15":"e","16":"m","17":"a","18":"i","19":"l","2":"e","20":" ","21":"a","22":"l","23":"r","24":"e","25":"a","26":"d","27":"y","28":" ","29":"e","3":"r","30":"x","31":"i","32":"s","33":"t","34":"s","4":" ","5":"w","6":"i","7":"t","8":"h","9":" ","level":"error","message":"Registration error:","service":"event-locator-backend","timestamp":"2026-03-27 11:22:19"}
+{"level":"info","message":"POST /api/auth/login","service":"event-locator-backend","timestamp":"2026-03-27 11:22:19"}
+{"level":"info","message":"User logged in: test@example.com","service":"event-locator-backend","timestamp":"2026-03-27 11:22:19"}
+{"level":"info","message":"POST /api/auth/login","service":"event-locator-backend","timestamp":"2026-03-27 11:22:19"}
+{"0":"I","1":"n","10":"a","11":"i","12":"l","13":" ","14":"o","15":"r","16":" ","17":"p","18":"a","19":"s","2":"v","20":"s","21":"w","22":"o","23":"r","24":"d","3":"a","4":"l","5":"i","6":"d","7":" ","8":"e","9":"m","level":"error","message":"Login error:","service":"event-locator-backend","timestamp":"2026-03-27 11:22:19"}
+{"level":"info","message":"GET /api/auth/me","service":"event-locator-backend","timestamp":"2026-03-27 11:22:19"}
+{"level":"info","message":"GET /api/auth/me","service":"event-locator-backend","timestamp":"2026-03-27 11:22:19"}
+{"level":"info","message":"POST /api/events","service":"event-locator-backend","timestamp":"2026-03-27 11:22:19"}
+{"level":"info","message":"Event created: evt1 by user test-user-id","service":"event-locator-backend","timestamp":"2026-03-27 11:22:19"}
+{"level":"info","message":"POST /api/events","service":"event-locator-backend","timestamp":"2026-03-27 11:22:19"}
+{"level":"info","message":"POST /api/events","service":"event-locator-backend","timestamp":"2026-03-27 11:22:19"}
+{"level":"info","message":"GET /api/events/not-a-uuid","service":"event-locator-backend","timestamp":"2026-03-27 11:22:19"}
+{"level":"info","message":"POST /api/auth/login","service":"event-locator-backend","timestamp":"2026-03-27 11:22:19"}
+{"0":"I","1":"n","10":"a","11":"i","12":"l","13":" ","14":"o","15":"r","16":" ","17":"p","18":"a","19":"s","2":"v","20":"s","21":"w","22":"o","23":"r","24":"d","3":"a","4":"l","5":"i","6":"d","7":" ","8":"e","9":"m","level":"error","message":"Login error:","service":"event-locator-backend","timestamp":"2026-03-27 11:22:19"}
+{"level":"info","message":"POST /api/auth/login","service":"event-locator-backend","timestamp":"2026-03-27 11:22:19"}
+{"0":"I","1":"n","10":"a","11":"i","12":"l","13":" ","14":"o","15":"r","16":" ","17":"p","18":"a","19":"s","2":"v","20":"s","21":"w","22":"o","23":"r","24":"d","3":"a","4":"l","5":"i","6":"d","7":" ","8":"e","9":"m","level":"error","message":"Login error:","service":"event-locator-backend","timestamp":"2026-03-27 11:22:19"}
+{"level":"info","message":"GET /api/categories","service":"event-locator-backend","timestamp":"2026-03-27 11:22:19"}
+{"level":"error","message":"Not found","method":"GET","path":"/test","service":"event-locator-backend","stack":"stack","timestamp":"2026-03-27 11:22:50"}
+{"level":"error","message":"Boom","method":"GET","path":"/test","service":"event-locator-backend","stack":"stack","timestamp":"2026-03-27 11:22:50"}
+{"level":"error","message":"Dev error","method":"GET","path":"/test","service":"event-locator-backend","stack":"trace","timestamp":"2026-03-27 11:22:50"}
+{"level":"error","message":"Prod error","method":"GET","path":"/test","service":"event-locator-backend","stack":"trace","timestamp":"2026-03-27 11:22:50"}
+{"level":"error","message":"Forbidden","method":"GET","path":"/test","service":"event-locator-backend","stack":"stack","timestamp":"2026-03-27 11:22:50"}
+{"level":"error","message":"Unknown","method":"GET","path":"/test","service":"event-locator-backend","stack":"stack","timestamp":"2026-03-27 11:22:50"}
+{"level":"error","message":"Dev","method":"GET","path":"/test","service":"event-locator-backend","stack":"trace","timestamp":"2026-03-27 11:22:50"}
+{"0":"i","1":"n","10":"k","11":"e","12":"n","2":"v","3":"a","4":"l","5":"i","6":"d","7":" ","8":"t","9":"o","level":"error","message":"Token verification failed:","service":"event-locator-backend","timestamp":"2026-03-27 11:22:50"}
+{"0":"j","1":"w","10":"m","11":"e","12":"d","2":"t","3":" ","4":"m","5":"a","6":"l","7":"f","8":"o","9":"r","level":"error","message":"Token verification failed:","service":"event-locator-backend","timestamp":"2026-03-27 11:22:50"}
+{"level":"info","message":"User registered: test@example.com","service":"event-locator-backend","timestamp":"2026-03-27 11:22:51"}
+{"level":"info","message":"User logged in: test@example.com","service":"event-locator-backend","timestamp":"2026-03-27 11:22:51"}
+{"level":"info","message":"User profile updated: 12345","service":"event-locator-backend","timestamp":"2026-03-27 11:22:51"}
+{"level":"info","message":"User location updated: 12345","service":"event-locator-backend","timestamp":"2026-03-27 11:22:51"}
+{"level":"info","message":"Password changed for user: 12345","service":"event-locator-backend","timestamp":"2026-03-27 11:22:52"}
+{"level":"info","message":"GET /api/health","service":"event-locator-backend","timestamp":"2026-03-27 11:22:52"}
+{"level":"info","message":"POST /api/auth/register","service":"event-locator-backend","timestamp":"2026-03-27 11:22:52"}
+{"level":"info","message":"User registered: test@example.com","service":"event-locator-backend","timestamp":"2026-03-27 11:22:52"}
+{"level":"info","message":"POST /api/auth/register","service":"event-locator-backend","timestamp":"2026-03-27 11:22:52"}
+{"level":"info","message":"POST /api/auth/register","service":"event-locator-backend","timestamp":"2026-03-27 11:22:52"}
+{"0":"U","1":"s","10":"t","11":"h","12":"i","13":"s","14":" ","15":"e","16":"m","17":"a","18":"i","19":"l","2":"e","20":" ","21":"a","22":"l","23":"r","24":"e","25":"a","26":"d","27":"y","28":" ","29":"e","3":"r","30":"x","31":"i","32":"s","33":"t","34":"s","4":" ","5":"w","6":"i","7":"t","8":"h","9":" ","level":"error","message":"Registration error:","service":"event-locator-backend","timestamp":"2026-03-27 11:22:52"}
+{"level":"info","message":"POST /api/auth/login","service":"event-locator-backend","timestamp":"2026-03-27 11:22:52"}
+{"level":"info","message":"User logged in: test@example.com","service":"event-locator-backend","timestamp":"2026-03-27 11:22:52"}
+{"level":"info","message":"POST /api/auth/login","service":"event-locator-backend","timestamp":"2026-03-27 11:22:52"}
+{"0":"I","1":"n","10":"a","11":"i","12":"l","13":" ","14":"o","15":"r","16":" ","17":"p","18":"a","19":"s","2":"v","20":"s","21":"w","22":"o","23":"r","24":"d","3":"a","4":"l","5":"i","6":"d","7":" ","8":"e","9":"m","level":"error","message":"Login error:","service":"event-locator-backend","timestamp":"2026-03-27 11:22:52"}
+{"level":"info","message":"GET /api/auth/me","service":"event-locator-backend","timestamp":"2026-03-27 11:22:52"}
+{"level":"info","message":"GET /api/auth/me","service":"event-locator-backend","timestamp":"2026-03-27 11:22:52"}
+{"level":"info","message":"POST /api/events","service":"event-locator-backend","timestamp":"2026-03-27 11:22:52"}
+{"level":"info","message":"Event created: evt1 by user test-user-id","service":"event-locator-backend","timestamp":"2026-03-27 11:22:52"}
+{"level":"info","message":"POST /api/events","service":"event-locator-backend","timestamp":"2026-03-27 11:22:52"}
+{"level":"info","message":"POST /api/events","service":"event-locator-backend","timestamp":"2026-03-27 11:22:52"}
+{"level":"info","message":"GET /api/events/not-a-uuid","service":"event-locator-backend","timestamp":"2026-03-27 11:22:52"}
+{"level":"info","message":"POST /api/auth/login","service":"event-locator-backend","timestamp":"2026-03-27 11:22:52"}
+{"0":"I","1":"n","10":"a","11":"i","12":"l","13":" ","14":"o","15":"r","16":" ","17":"p","18":"a","19":"s","2":"v","20":"s","21":"w","22":"o","23":"r","24":"d","3":"a","4":"l","5":"i","6":"d","7":" ","8":"e","9":"m","level":"error","message":"Login error:","service":"event-locator-backend","timestamp":"2026-03-27 11:22:52"}
+{"level":"info","message":"POST /api/auth/login","service":"event-locator-backend","timestamp":"2026-03-27 11:22:52"}
+{"0":"I","1":"n","10":"a","11":"i","12":"l","13":" ","14":"o","15":"r","16":" ","17":"p","18":"a","19":"s","2":"v","20":"s","21":"w","22":"o","23":"r","24":"d","3":"a","4":"l","5":"i","6":"d","7":" ","8":"e","9":"m","level":"error","message":"Login error:","service":"event-locator-backend","timestamp":"2026-03-27 11:22:52"}
+{"level":"info","message":"GET /api/categories","service":"event-locator-backend","timestamp":"2026-03-27 11:22:52"}
+{"level":"error","message":"Not found","method":"GET","path":"/test","service":"event-locator-backend","stack":"stack","timestamp":"2026-03-27 11:24:07"}
+{"level":"error","message":"Boom","method":"GET","path":"/test","service":"event-locator-backend","stack":"stack","timestamp":"2026-03-27 11:24:07"}
+{"level":"error","message":"Dev error","method":"GET","path":"/test","service":"event-locator-backend","stack":"trace","timestamp":"2026-03-27 11:24:07"}
+{"level":"error","message":"Prod error","method":"GET","path":"/test","service":"event-locator-backend","stack":"trace","timestamp":"2026-03-27 11:24:07"}
+{"level":"error","message":"Forbidden","method":"GET","path":"/test","service":"event-locator-backend","stack":"stack","timestamp":"2026-03-27 11:24:07"}
+{"level":"error","message":"Unknown","method":"GET","path":"/test","service":"event-locator-backend","stack":"stack","timestamp":"2026-03-27 11:24:07"}
+{"level":"error","message":"Dev","method":"GET","path":"/test","service":"event-locator-backend","stack":"trace","timestamp":"2026-03-27 11:24:07"}
+{"0":"i","1":"n","10":"k","11":"e","12":"n","2":"v","3":"a","4":"l","5":"i","6":"d","7":" ","8":"t","9":"o","level":"error","message":"Token verification failed:","service":"event-locator-backend","timestamp":"2026-03-27 11:24:07"}
+{"0":"j","1":"w","10":"m","11":"e","12":"d","2":"t","3":" ","4":"m","5":"a","6":"l","7":"f","8":"o","9":"r","level":"error","message":"Token verification failed:","service":"event-locator-backend","timestamp":"2026-03-27 11:24:07"}
+{"level":"info","message":"User registered: test@example.com","service":"event-locator-backend","timestamp":"2026-03-27 11:24:08"}
+{"level":"info","message":"User logged in: test@example.com","service":"event-locator-backend","timestamp":"2026-03-27 11:24:08"}
+{"level":"info","message":"User profile updated: 12345","service":"event-locator-backend","timestamp":"2026-03-27 11:24:08"}
+{"level":"info","message":"User location updated: 12345","service":"event-locator-backend","timestamp":"2026-03-27 11:24:08"}
+{"level":"info","message":"Password changed for user: 12345","service":"event-locator-backend","timestamp":"2026-03-27 11:24:08"}
+{"level":"info","message":"GET /api/health","service":"event-locator-backend","timestamp":"2026-03-27 11:24:10"}
+{"level":"info","message":"POST /api/auth/register","service":"event-locator-backend","timestamp":"2026-03-27 11:24:10"}
+{"level":"info","message":"User registered: test@example.com","service":"event-locator-backend","timestamp":"2026-03-27 11:24:10"}
+{"level":"info","message":"POST /api/auth/register","service":"event-locator-backend","timestamp":"2026-03-27 11:24:10"}
+{"level":"info","message":"POST /api/auth/register","service":"event-locator-backend","timestamp":"2026-03-27 11:24:10"}
+{"0":"U","1":"s","10":"t","11":"h","12":"i","13":"s","14":" ","15":"e","16":"m","17":"a","18":"i","19":"l","2":"e","20":" ","21":"a","22":"l","23":"r","24":"e","25":"a","26":"d","27":"y","28":" ","29":"e","3":"r","30":"x","31":"i","32":"s","33":"t","34":"s","4":" ","5":"w","6":"i","7":"t","8":"h","9":" ","level":"error","message":"Registration error:","service":"event-locator-backend","timestamp":"2026-03-27 11:24:10"}
+{"level":"info","message":"POST /api/auth/login","service":"event-locator-backend","timestamp":"2026-03-27 11:24:10"}
+{"level":"info","message":"User logged in: test@example.com","service":"event-locator-backend","timestamp":"2026-03-27 11:24:10"}
+{"level":"info","message":"POST /api/auth/login","service":"event-locator-backend","timestamp":"2026-03-27 11:24:10"}
+{"0":"I","1":"n","10":"a","11":"i","12":"l","13":" ","14":"o","15":"r","16":" ","17":"p","18":"a","19":"s","2":"v","20":"s","21":"w","22":"o","23":"r","24":"d","3":"a","4":"l","5":"i","6":"d","7":" ","8":"e","9":"m","level":"error","message":"Login error:","service":"event-locator-backend","timestamp":"2026-03-27 11:24:10"}
+{"level":"info","message":"GET /api/auth/me","service":"event-locator-backend","timestamp":"2026-03-27 11:24:10"}
+{"level":"info","message":"GET /api/auth/me","service":"event-locator-backend","timestamp":"2026-03-27 11:24:10"}
+{"level":"info","message":"POST /api/events","service":"event-locator-backend","timestamp":"2026-03-27 11:24:10"}
+{"level":"info","message":"Event created: evt1 by user test-user-id","service":"event-locator-backend","timestamp":"2026-03-27 11:24:10"}
+{"level":"info","message":"POST /api/events","service":"event-locator-backend","timestamp":"2026-03-27 11:24:10"}
+{"level":"info","message":"POST /api/events","service":"event-locator-backend","timestamp":"2026-03-27 11:24:10"}
+{"level":"info","message":"GET /api/events/not-a-uuid","service":"event-locator-backend","timestamp":"2026-03-27 11:24:10"}
+{"level":"info","message":"POST /api/auth/login","service":"event-locator-backend","timestamp":"2026-03-27 11:24:10"}
+{"0":"I","1":"n","10":"a","11":"i","12":"l","13":" ","14":"o","15":"r","16":" ","17":"p","18":"a","19":"s","2":"v","20":"s","21":"w","22":"o","23":"r","24":"d","3":"a","4":"l","5":"i","6":"d","7":" ","8":"e","9":"m","level":"error","message":"Login error:","service":"event-locator-backend","timestamp":"2026-03-27 11:24:10"}
+{"level":"info","message":"POST /api/auth/login","service":"event-locator-backend","timestamp":"2026-03-27 11:24:10"}
+{"0":"I","1":"n","10":"a","11":"i","12":"l","13":" ","14":"o","15":"r","16":" ","17":"p","18":"a","19":"s","2":"v","20":"s","21":"w","22":"o","23":"r","24":"d","3":"a","4":"l","5":"i","6":"d","7":" ","8":"e","9":"m","level":"error","message":"Login error:","service":"event-locator-backend","timestamp":"2026-03-27 11:24:10"}
+{"level":"info","message":"GET /api/categories","service":"event-locator-backend","timestamp":"2026-03-27 11:24:10"}
+{"level":"info","message":"GET /api/events/search","service":"event-locator-backend","timestamp":"2026-03-27 11:31:48"}
+{"level":"info","message":"DELETE /api/events/%3Cevent_id%3E","service":"event-locator-backend","timestamp":"2026-03-27 11:34:38"}
+{"level":"info","message":"GET /api/categories","service":"event-locator-backend","timestamp":"2026-03-27 11:36:46"}
+{"level":"info","message":"DELETE /api/events/%3Cevent_id%3E","service":"event-locator-backend","timestamp":"2026-03-27 11:37:05"}
+{"level":"info","message":"POST /api/events/search/location","service":"event-locator-backend","timestamp":"2026-03-27 11:37:29"}
+{"0":"i","1":"n","10":"p","11":"u","12":"t","13":" ","14":"s","15":"y","16":"n","17":"t","18":"a","19":"x","2":"v","20":" ","21":"f","22":"o","23":"r","24":" ","25":"t","26":"y","27":"p","28":"e","29":" ","3":"a","30":"u","31":"u","32":"i","33":"d","34":":","35":" ","36":"\"","37":"<","38":"t","39":"e","4":"l","40":"c","41":"h","42":"n","43":"o","44":"l","45":"o","46":"g","47":"y","48":"_","49":"c","5":"i","50":"a","51":"t","52":"e","53":"g","54":"o","55":"r","56":"y","57":"_","58":"i","59":"d","6":"d","60":">","61":"\"","7":" ","8":"i","9":"n","level":"error","message":"Location search error:","service":"event-locator-backend","timestamp":"2026-03-27 11:37:29"}
+{"level":"info","message":"POST /api/users/categories","service":"event-locator-backend","timestamp":"2026-03-27 11:40:08"}
+{"0":"i","1":"n","10":"p","11":"u","12":"t","13":" ","14":"s","15":"y","16":"n","17":"t","18":"a","19":"x","2":"v","20":" ","21":"f","22":"o","23":"r","24":" ","25":"t","26":"y","27":"p","28":"e","29":" ","3":"a","30":"u","31":"u","32":"i","33":"d","34":":","35":" ","36":"\"","37":"<","38":"t","39":"e","4":"l","40":"c","41":"h","42":"n","43":"o","44":"l","45":"o","46":"g","47":"y","48":"_","49":"c","5":"i","50":"a","51":"t","52":"e","53":"g","54":"o","55":"r","56":"y","57":"_","58":"i","59":"d","6":"d","60":">","61":"\"","7":" ","8":"i","9":"n","level":"error","message":"Set categories error:","service":"event-locator-backend","timestamp":"2026-03-27 11:40:08"}
+{"level":"info","message":"GET /api/users/preferences","service":"event-locator-backend","timestamp":"2026-03-27 11:41:51"}
+{"level":"info","message":"PUT /api/users/preferences","service":"event-locator-backend","timestamp":"2026-03-27 11:45:40"}
+{"level":"info","message":"Preferences updated: 9f8aac3a-ab37-4c71-a642-152269e9cc5b","service":"event-locator-backend","timestamp":"2026-03-27 11:45:40"}
+{"level":"info","message":"POST /api/users/favorites/%3E%3Cevent_id%3E","service":"event-locator-backend","timestamp":"2026-03-27 11:47:40"}
+{"0":"i","1":"n","10":"p","11":"u","12":"t","13":" ","14":"s","15":"y","16":"n","17":"t","18":"a","19":"x","2":"v","20":" ","21":"f","22":"o","23":"r","24":" ","25":"t","26":"y","27":"p","28":"e","29":" ","3":"a","30":"u","31":"u","32":"i","33":"d","34":":","35":" ","36":"\"","37":">","38":"<","39":"e","4":"l","40":"v","41":"e","42":"n","43":"t","44":"_","45":"i","46":"d","47":">","48":"\"","5":"i","6":"d","7":" ","8":"i","9":"n","level":"error","message":"Add favorite error:","service":"event-locator-backend","timestamp":"2026-03-27 11:47:40"}
+{"level":"info","message":"GET /api/users/favorites/%3E%3Cevent_id%3E/check","service":"event-locator-backend","timestamp":"2026-03-27 11:50:20"}
+{"0":"i","1":"n","10":"p","11":"u","12":"t","13":" ","14":"s","15":"y","16":"n","17":"t","18":"a","19":"x","2":"v","20":" ","21":"f","22":"o","23":"r","24":" ","25":"t","26":"y","27":"p","28":"e","29":" ","3":"a","30":"u","31":"u","32":"i","33":"d","34":":","35":" ","36":"\"","37":">","38":"<","39":"e","4":"l","40":"v","41":"e","42":"n","43":"t","44":"_","45":"i","46":"d","47":">","48":"\"","5":"i","6":"d","7":" ","8":"i","9":"n","level":"error","message":"Check favorite error:","service":"event-locator-backend","timestamp":"2026-03-27 11:50:20"}
+{"level":"info","message":"GET /api/users/favorites","service":"event-locator-backend","timestamp":"2026-03-27 11:51:39"}
+{"0":"c","1":"o","10":"e","11":"n","12":"d","13":"e","14":"e","15":"s","16":".","17":"c","18":"u","19":"r","2":"l","20":"r","21":"e","22":"n","23":"t","24":"_","25":"a","26":"t","27":"t","28":"e","29":"n","3":"u","30":"d","31":"e","32":"e","33":"s","34":" ","35":"d","36":"o","37":"e","38":"s","39":" ","4":"m","40":"n","41":"o","42":"t","43":" ","44":"e","45":"x","46":"i","47":"s","48":"t","5":"n","6":" ","7":"a","8":"t","9":"t","level":"error","message":"Get favorites error:","service":"event-locator-backend","timestamp":"2026-03-27 11:51:40"}
+{"level":"info","message":"GET /api/users/favorites","service":"event-locator-backend","timestamp":"2026-03-27 11:51:56"}
+{"0":"c","1":"o","10":"e","11":"n","12":"d","13":"e","14":"e","15":"s","16":".","17":"c","18":"u","19":"r","2":"l","20":"r","21":"e","22":"n","23":"t","24":"_","25":"a","26":"t","27":"t","28":"e","29":"n","3":"u","30":"d","31":"e","32":"e","33":"s","34":" ","35":"d","36":"o","37":"e","38":"s","39":" ","4":"m","40":"n","41":"o","42":"t","43":" ","44":"e","45":"x","46":"i","47":"s","48":"t","5":"n","6":" ","7":"a","8":"t","9":"t","level":"error","message":"Get favorites error:","service":"event-locator-backend","timestamp":"2026-03-27 11:51:56"}
+{"level":"info","message":"DELETE /api/users/favorites/%3Cevent_id%3E","service":"event-locator-backend","timestamp":"2026-03-27 11:54:24"}
+{"0":"i","1":"n","10":"p","11":"u","12":"t","13":" ","14":"s","15":"y","16":"n","17":"t","18":"a","19":"x","2":"v","20":" ","21":"f","22":"o","23":"r","24":" ","25":"t","26":"y","27":"p","28":"e","29":" ","3":"a","30":"u","31":"u","32":"i","33":"d","34":":","35":" ","36":"\"","37":"<","38":"e","39":"v","4":"l","40":"e","41":"n","42":"t","43":"_","44":"i","45":"d","46":">","47":"\"","5":"i","6":"d","7":" ","8":"i","9":"n","level":"error","message":"Remove favorite error:","service":"event-locator-backend","timestamp":"2026-03-27 11:54:24"}
+{"level":"info","message":"POST /api/users/events/%3E%3Cevent_id%3E/register","service":"event-locator-backend","timestamp":"2026-03-27 11:56:42"}
+{"0":"i","1":"n","10":"p","11":"u","12":"t","13":" ","14":"s","15":"y","16":"n","17":"t","18":"a","19":"x","2":"v","20":" ","21":"f","22":"o","23":"r","24":" ","25":"t","26":"y","27":"p","28":"e","29":" ","3":"a","30":"u","31":"u","32":"i","33":"d","34":":","35":" ","36":"\"","37":">","38":"<","39":"e","4":"l","40":"v","41":"e","42":"n","43":"t","44":"_","45":"i","46":"d","47":">","48":"\"","5":"i","6":"d","7":" ","8":"i","9":"n","level":"error","message":"Register event error:","service":"event-locator-backend","timestamp":"2026-03-27 11:56:43"}
+{"level":"info","message":"GET /api/users/events/attending","service":"event-locator-backend","timestamp":"2026-03-27 11:58:45"}
+{"level":"info","message":"DELETE /api/users/events/%3E%3Cevent_id%3E/unregister","service":"event-locator-backend","timestamp":"2026-03-27 12:01:29"}
+{"0":"i","1":"n","10":"p","11":"u","12":"t","13":" ","14":"s","15":"y","16":"n","17":"t","18":"a","19":"x","2":"v","20":" ","21":"f","22":"o","23":"r","24":" ","25":"t","26":"y","27":"p","28":"e","29":" ","3":"a","30":"u","31":"u","32":"i","33":"d","34":":","35":" ","36":"\"","37":">","38":"<","39":"e","4":"l","40":"v","41":"e","42":"n","43":"t","44":"_","45":"i","46":"d","47":">","48":"\"","5":"i","6":"d","7":" ","8":"i","9":"n","level":"error","message":"Unregister event error:","service":"event-locator-backend","timestamp":"2026-03-27 12:01:29"}
+{"level":"info","message":"DELETE /api/users/events/%3E%3C9f8aac3a-ab37-4c71-a642-152269e9cc5b%3E/unregister","service":"event-locator-backend","timestamp":"2026-03-27 12:07:56"}
+{"0":"i","1":"n","10":"p","11":"u","12":"t","13":" ","14":"s","15":"y","16":"n","17":"t","18":"a","19":"x","2":"v","20":" ","21":"f","22":"o","23":"r","24":" ","25":"t","26":"y","27":"p","28":"e","29":" ","3":"a","30":"u","31":"u","32":"i","33":"d","34":":","35":" ","36":"\"","37":">","38":"<","39":"9","4":"l","40":"f","41":"8","42":"a","43":"a","44":"c","45":"3","46":"a","47":"-","48":"a","49":"b","5":"i","50":"3","51":"7","52":"-","53":"4","54":"c","55":"7","56":"1","57":"-","58":"a","59":"6","6":"d","60":"4","61":"2","62":"-","63":"1","64":"5","65":"2","66":"2","67":"6","68":"9","69":"e","7":" ","70":"9","71":"c","72":"c","73":"5","74":"b","75":">","76":"\"","8":"i","9":"n","level":"error","message":"Unregister event error:","service":"event-locator-backend","timestamp":"2026-03-27 12:07:56"}
+{"level":"info","message":"GET /api/events/%3C9f8aac3a-ab37-4c71-a642-152269e9cc5b%3E","service":"event-locator-backend","timestamp":"2026-03-27 12:09:11"}
+{"level":"info","message":"GET /api/events","service":"event-locator-backend","timestamp":"2026-03-27 12:14:47"}
+{"level":"info","message":"DELETE /api/events/%3C9f8aac3a-ab37-4c71-a642-152269e9cc5b%3E","service":"event-locator-backend","timestamp":"2026-03-27 12:17:23"}
+{"level":"info","message":"DELETE /api/events/9f8aac3a-ab37-4c71-a642-152269e9cc5b","service":"event-locator-backend","timestamp":"2026-03-27 12:25:55"}
+{"0":"E","1":"v","10":"f","11":"o","12":"u","13":"n","14":"d","2":"e","3":"n","4":"t","5":" ","6":"n","7":"o","8":"t","9":" ","level":"error","message":"Delete event error:","service":"event-locator-backend","timestamp":"2026-03-27 12:25:55"}
+{"level":"info","message":"PUT /api/events/9f8aac3a-ab37-4c71-a642-152269e9cc5b","service":"event-locator-backend","timestamp":"2026-03-27 12:28:26"}
+{"0":"E","1":"v","10":"f","11":"o","12":"u","13":"n","14":"d","2":"e","3":"n","4":"t","5":" ","6":"n","7":"o","8":"t","9":" ","level":"error","message":"Update event error:","service":"event-locator-backend","timestamp":"2026-03-27 12:28:26"}
+{"level":"info","message":"POST /api/events","service":"event-locator-backend","timestamp":"2026-03-27 12:29:43"}
+{"0":"i","1":"n","10":"p","11":"u","12":"t","13":" ","14":"s","15":"y","16":"n","17":"t","18":"a","19":"x","2":"v","20":" ","21":"f","22":"o","23":"r","24":" ","25":"t","26":"y","27":"p","28":"e","29":" ","3":"a","30":"u","31":"u","32":"i","33":"d","34":":","35":" ","36":"\"","37":"<","38":"t","39":"e","4":"l","40":"c","41":"h","42":"n","43":"o","44":"l","45":"o","46":"g","47":"y","48":"_","49":"c","5":"i","50":"a","51":"t","52":"e","53":"g","54":"o","55":"r","56":"y","57":"_","58":"i","59":"d","6":"d","60":">","61":"\"","7":" ","8":"i","9":"n","level":"error","message":"Create event error:","service":"event-locator-backend","timestamp":"2026-03-27 12:29:43"}
+{"level":"info","message":"POST /api/events","service":"event-locator-backend","timestamp":"2026-03-27 12:32:44"}
+{"level":"info","message":"Event created: b645749a-c584-4704-b1db-65dcbe3d0abe by user 9f8aac3a-ab37-4c71-a642-152269e9cc5b","service":"event-locator-backend","timestamp":"2026-03-27 12:32:45"}
+{"level":"info","message":"GET /api/events/9f8aac3a-ab37-4c71-a642-152269e9cc5b","service":"event-locator-backend","timestamp":"2026-03-27 12:34:01"}
+{"0":"E","1":"v","10":"f","11":"o","12":"u","13":"n","14":"d","2":"e","3":"n","4":"t","5":" ","6":"n","7":"o","8":"t","9":" ","level":"error","message":"Get event error:","service":"event-locator-backend","timestamp":"2026-03-27 12:34:01"}
+{"level":"info","message":"PUT /api/auth/profile","service":"event-locator-backend","timestamp":"2026-03-27 12:39:29"}
+{"level":"info","message":"User profile updated: 9f8aac3a-ab37-4c71-a642-152269e9cc5b","service":"event-locator-backend","timestamp":"2026-03-27 12:39:29"}
+{"level":"info","message":"User profile updated: 9f8aac3a-ab37-4c71-a642-152269e9cc5b","service":"event-locator-backend","timestamp":"2026-03-27 12:39:29"}
+{"level":"info","message":"POST /api/auth/change-password","service":"event-locator-backend","timestamp":"2026-03-27 12:41:52"}
+{"level":"info","message":"Password changed for user: 9f8aac3a-ab37-4c71-a642-152269e9cc5b","service":"event-locator-backend","timestamp":"2026-03-27 12:41:52"}
+{"level":"info","message":"Password changed: 9f8aac3a-ab37-4c71-a642-152269e9cc5b","service":"event-locator-backend","timestamp":"2026-03-27 12:41:52"}
+{"level":"info","message":"GET /api/events","service":"event-locator-backend","timestamp":"2026-03-27 12:42:35"}
+{"level":"info","message":"GET /api/events/ea4e043a-db61-4471-8064-1bfaa7d4b0ac","service":"event-locator-backend","timestamp":"2026-03-27 12:43:04"}
+{"level":"info","message":"PUT /api/events/ea4e043a-db61-4471-8064-1bfaa7d4b0ac","service":"event-locator-backend","timestamp":"2026-03-27 12:44:46"}
+{"level":"info","message":"Event updated: ea4e043a-db61-4471-8064-1bfaa7d4b0ac","service":"event-locator-backend","timestamp":"2026-03-27 12:44:46"}
+{"level":"info","message":"POST /api/events/search/location","service":"event-locator-backend","timestamp":"2026-03-27 12:45:31"}
+{"level":"info","message":"DELETE /api/events/ea4e043a-db61-4471-8064-1bfaa7d4b0ac","service":"event-locator-backend","timestamp":"2026-03-27 12:46:47"}
+{"level":"info","message":"Event deleted: ea4e043a-db61-4471-8064-1bfaa7d4b0ac","service":"event-locator-backend","timestamp":"2026-03-27 12:46:47"}
+{"level":"info","message":"POST /api/users/categories","service":"event-locator-backend","timestamp":"2026-03-27 12:51:45"}
+{"level":"info","message":"Preferred categories updated: 9f8aac3a-ab37-4c71-a642-152269e9cc5b","service":"event-locator-backend","timestamp":"2026-03-27 12:51:45"}
+{"level":"info","message":"POST /api/users/favorites/ea4e043a-db61-4471-8064-1bfaa7d4b0ac","service":"event-locator-backend","timestamp":"2026-03-27 12:53:14"}
+{"0":"E","1":"v","10":"f","11":"o","12":"u","13":"n","14":"d","2":"e","3":"n","4":"t","5":" ","6":"n","7":"o","8":"t","9":" ","level":"error","message":"Add favorite error:","service":"event-locator-backend","timestamp":"2026-03-27 12:53:14"}
+{"level":"info","message":"POST /api/users/favorites/ea4e043a-db61-4471-8064-1bfaa7d4b0ac","service":"event-locator-backend","timestamp":"2026-03-27 12:54:29"}
+{"0":"E","1":"v","10":"f","11":"o","12":"u","13":"n","14":"d","2":"e","3":"n","4":"t","5":" ","6":"n","7":"o","8":"t","9":" ","level":"error","message":"Add favorite error:","service":"event-locator-backend","timestamp":"2026-03-27 12:54:29"}
+{"level":"info","message":"GET /api/users/favorites/ea4e043a-db61-4471-8064-1bfaa7d4b0ac/check","service":"event-locator-backend","timestamp":"2026-03-27 12:55:19"}
+{"level":"info","message":"GET /api/users/favorites","service":"event-locator-backend","timestamp":"2026-03-27 12:55:41"}
+{"0":"c","1":"o","10":"e","11":"n","12":"d","13":"e","14":"e","15":"s","16":".","17":"c","18":"u","19":"r","2":"l","20":"r","21":"e","22":"n","23":"t","24":"_","25":"a","26":"t","27":"t","28":"e","29":"n","3":"u","30":"d","31":"e","32":"e","33":"s","34":" ","35":"d","36":"o","37":"e","38":"s","39":" ","4":"m","40":"n","41":"o","42":"t","43":" ","44":"e","45":"x","46":"i","47":"s","48":"t","5":"n","6":" ","7":"a","8":"t","9":"t","level":"error","message":"Get favorites error:","service":"event-locator-backend","timestamp":"2026-03-27 12:55:41"}
+{"level":"info","message":"DELETE /api/users/favorites/ea4e043a-db61-4471-8064-1bfaa7d4b0ac","service":"event-locator-backend","timestamp":"2026-03-27 12:56:15"}
+{"0":"F","1":"a","10":"v","11":"e","12":"n","13":"t","14":" ","15":"n","16":"o","17":"t","18":" ","19":"f","2":"v","20":"o","21":"u","22":"n","23":"d","3":"o","4":"r","5":"i","6":"t","7":"e","8":" ","9":"e","level":"error","message":"Remove favorite error:","service":"event-locator-backend","timestamp":"2026-03-27 12:56:15"}
+{"level":"info","message":"POST /api/users/events/ea4e043a-db61-4471-8064-1bfaa7d4b0ac/register","service":"event-locator-backend","timestamp":"2026-03-27 12:56:39"}
+{"0":"E","1":"v","10":"f","11":"o","12":"u","13":"n","14":"d","2":"e","3":"n","4":"t","5":" ","6":"n","7":"o","8":"t","9":" ","level":"error","message":"Register event error:","service":"event-locator-backend","timestamp":"2026-03-27 12:56:39"}
+{"level":"info","message":"DELETE /api/users/events/ea4e043a-db61-4471-8064-1bfaa7d4b0ac/unregister","service":"event-locator-backend","timestamp":"2026-03-27 12:57:46"}
+{"0":"R","1":"e","10":"o","11":"n","12":" ","13":"n","14":"o","15":"t","16":" ","17":"f","18":"o","19":"u","2":"g","20":"n","21":"d","3":"i","4":"s","5":"t","6":"r","7":"a","8":"t","9":"i","level":"error","message":"Unregister event error:","service":"event-locator-backend","timestamp":"2026-03-27 12:57:46"}
+{"level":"info","message":"POST /api/reviews/ea4e043a-db61-4471-8064-1bfaa7d4b0ac","service":"event-locator-backend","timestamp":"2026-03-27 13:02:22"}
+{"0":"E","1":"v","10":"f","11":"o","12":"u","13":"n","14":"d","2":"e","3":"n","4":"t","5":" ","6":"n","7":"o","8":"t","9":" ","level":"error","message":"Create review error:","service":"event-locator-backend","timestamp":"2026-03-27 13:02:22"}
+{"level":"info","message":"POST /api/events","service":"event-locator-backend","timestamp":"2026-03-27 13:02:52"}
+{"level":"info","message":"Event created: 092401fa-fdde-42ab-933c-dd4b7bd98b8b by user 9f8aac3a-ab37-4c71-a642-152269e9cc5b","service":"event-locator-backend","timestamp":"2026-03-27 13:02:52"}
+{"level":"info","message":"GET /api/events","service":"event-locator-backend","timestamp":"2026-03-27 13:03:11"}
+{"level":"info","message":"GET /api/events/ea4e043a-db61-4471-8064-1bfaa7d4b0ac","service":"event-locator-backend","timestamp":"2026-03-27 13:04:01"}
+{"0":"E","1":"v","10":"f","11":"o","12":"u","13":"n","14":"d","2":"e","3":"n","4":"t","5":" ","6":"n","7":"o","8":"t","9":" ","level":"error","message":"Get event error:","service":"event-locator-backend","timestamp":"2026-03-27 13:04:01"}
+{"level":"info","message":"GET /api/events/b645749a-c584-4704-b1db-65dcbe3d0abe","service":"event-locator-backend","timestamp":"2026-03-27 13:04:09"}
+{"level":"info","message":"PUT /api/events/b645749a-c584-4704-b1db-65dcbe3d0abe","service":"event-locator-backend","timestamp":"2026-03-27 13:04:32"}
+{"level":"info","message":"Event updated: b645749a-c584-4704-b1db-65dcbe3d0abe","service":"event-locator-backend","timestamp":"2026-03-27 13:04:32"}
+{"level":"info","message":"POST /api/users/favorites/b645749a-c584-4704-b1db-65dcbe3d0abe","service":"event-locator-backend","timestamp":"2026-03-27 13:06:25"}
+{"level":"info","message":"Event added to favorites: b645749a-c584-4704-b1db-65dcbe3d0abe by 9f8aac3a-ab37-4c71-a642-152269e9cc5b","service":"event-locator-backend","timestamp":"2026-03-27 13:06:25"}
+{"level":"info","message":"GET /api/users/favorites/b645749a-c584-4704-b1db-65dcbe3d0abe/check","service":"event-locator-backend","timestamp":"2026-03-27 13:07:24"}
+{"level":"info","message":"DELETE /api/users/favorites/b645749a-c584-4704-b1db-65dcbe3d0abe","service":"event-locator-backend","timestamp":"2026-03-27 13:09:03"}
+{"level":"info","message":"Event removed from favorites: b645749a-c584-4704-b1db-65dcbe3d0abe by 9f8aac3a-ab37-4c71-a642-152269e9cc5b","service":"event-locator-backend","timestamp":"2026-03-27 13:09:03"}
+{"level":"info","message":"POST /api/users/events/b645749a-c584-4704-b1db-65dcbe3d0abe/register","service":"event-locator-backend","timestamp":"2026-03-27 13:09:49"}
+{"0":"A","1":"l","10":"g","11":"i","12":"s","13":"t","14":"e","15":"r","16":"e","17":"d","18":" ","19":"f","2":"r","20":"o","21":"r","22":" ","23":"t","24":"h","25":"i","26":"s","27":" ","28":"e","29":"v","3":"e","30":"e","31":"n","32":"t","4":"a","5":"d","6":"y","7":" ","8":"r","9":"e","level":"error","message":"Register event error:","service":"event-locator-backend","timestamp":"2026-03-27 13:09:49"}
+{"level":"info","message":"DELETE /api/users/events/b645749a-c584-4704-b1db-65dcbe3d0abe/unregister","service":"event-locator-backend","timestamp":"2026-03-27 13:11:45"}
+{"level":"info","message":"User unregistered from event: b645749a-c584-4704-b1db-65dcbe3d0abe","service":"event-locator-backend","timestamp":"2026-03-27 13:11:45"}
+{"level":"info","message":"POST /api/reviews/b645749a-c584-4704-b1db-65dcbe3d0abe","service":"event-locator-backend","timestamp":"2026-03-27 13:12:18"}
+{"0":"Y","1":"o","10":"e","11":" ","12":"r","13":"e","14":"g","15":"i","16":"s","17":"t","18":"e","19":"r","2":"u","20":"e","21":"d","22":" ","23":"f","24":"o","25":"r","26":" ","27":"t","28":"h","29":"i","3":" ","30":"s","31":" ","32":"e","33":"v","34":"e","35":"n","36":"t","37":" ","38":"t","39":"o","4":"m","40":" ","41":"l","42":"e","43":"a","44":"v","45":"e","46":" ","47":"a","48":" ","49":"r","5":"u","50":"e","51":"v","52":"i","53":"e","54":"w","6":"s","7":"t","8":" ","9":"b","level":"error","message":"Create review error:","service":"event-locator-backend","timestamp":"2026-03-27 13:12:18"}
+{"level":"info","message":"GET /api/reviews/b645749a-c584-4704-b1db-65dcbe3d0abe","service":"event-locator-backend","timestamp":"2026-03-27 13:15:58"}
+{"level":"info","message":"GET /api/reviews/b645749a-c584-4704-b1db-65dcbe3d0abe/stats","service":"event-locator-backend","timestamp":"2026-03-27 13:17:29"}
+{"level":"info","message":"GET /api/reviews/b645749a-c584-4704-b1db-65dcbe3d0abe/user","service":"event-locator-backend","timestamp":"2026-03-27 13:19:25"}
+{"level":"info","message":"GET /api/reviews/top-rated","service":"event-locator-backend","timestamp":"2026-03-27 13:20:45"}
+{"level":"info","message":"DELETE /api/reviews/%3Creview_id%3E","service":"event-locator-backend","timestamp":"2026-03-27 13:25:29"}
+{"level":"info","message":"GET /api/notifications","service":"event-locator-backend","timestamp":"2026-03-27 13:29:19"}
+{"level":"info","message":"GET /api/notifications/unread-count","service":"event-locator-backend","timestamp":"2026-03-27 13:39:30"}
+{"level":"info","message":"PUT /api/notifications/mark-all-read","service":"event-locator-backend","timestamp":"2026-03-27 13:40:56"}
+{"level":"info","message":"All notifications marked as read for user: 9f8aac3a-ab37-4c71-a642-152269e9cc5b","service":"event-locator-backend","timestamp":"2026-03-27 13:40:56"}
+{"level":"info","message":"PUT /api/notifications/mark-all-read","service":"event-locator-backend","timestamp":"2026-03-27 13:42:15"}
+{"level":"info","message":"All notifications marked as read for user: 9f8aac3a-ab37-4c71-a642-152269e9cc5b","service":"event-locator-backend","timestamp":"2026-03-27 13:42:15"}
+{"level":"info","message":"PUT /api/notifications/9f8aac3a-ab37-4c71-a642-152269e9cc5b/read","service":"event-locator-backend","timestamp":"2026-03-27 13:45:10"}
+{"level":"info","message":"Notification marked as read: 9f8aac3a-ab37-4c71-a642-152269e9cc5b","service":"event-locator-backend","timestamp":"2026-03-27 13:45:10"}
+{"level":"info","message":"POST /api/auth/login","service":"event-locator-backend","timestamp":"2026-03-27 13:49:14"}
+{"level":"info","message":"User logged in: l.carew@alustudent.com","service":"event-locator-backend","timestamp":"2026-03-27 13:49:15"}
+{"level":"info","message":"User logged in: l.carew@alustudent.com","service":"event-locator-backend","timestamp":"2026-03-27 13:49:15"}
+{"level":"info","message":"GET /api/auth/register","service":"event-locator-backend","timestamp":"2026-03-27 13:53:26"}
+{"level":"info","message":"POST /api/auth/register","service":"event-locator-backend","timestamp":"2026-03-27 13:53:37"}
+{"0":"U","1":"s","10":"t","11":"h","12":"i","13":"s","14":" ","15":"e","16":"m","17":"a","18":"i","19":"l","2":"e","20":" ","21":"a","22":"l","23":"r","24":"e","25":"a","26":"d","27":"y","28":" ","29":"e","3":"r","30":"x","31":"i","32":"s","33":"t","34":"s","4":" ","5":"w","6":"i","7":"t","8":"h","9":" ","level":"error","message":"Registration error:","service":"event-locator-backend","timestamp":"2026-03-27 13:53:37"}
+{"level":"info","message":"POST /api/auth/login","service":"event-locator-backend","timestamp":"2026-03-27 13:57:25"}
+{"level":"info","message":"User logged in: l.carew@alustudent.com","service":"event-locator-backend","timestamp":"2026-03-27 13:57:26"}
+{"level":"info","message":"User logged in: l.carew@alustudent.com","service":"event-locator-backend","timestamp":"2026-03-27 13:57:26"}
+{"level":"info","message":"POST /api/auth/login","service":"event-locator-backend","timestamp":"2026-03-27 13:57:46"}
+{"level":"info","message":"User logged in: l.carew@alustudent.com","service":"event-locator-backend","timestamp":"2026-03-27 13:57:46"}
+{"level":"info","message":"User logged in: l.carew@alustudent.com","service":"event-locator-backend","timestamp":"2026-03-27 13:57:46"}
+{"level":"info","message":"GET /api/auth/login","service":"event-locator-backend","timestamp":"2026-03-27 13:58:35"}

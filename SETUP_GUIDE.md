@@ -171,7 +171,6 @@ npm run migrate
 
 Expected output:
 
-```
 Starting database migrations...
 Initializing database schema...
 ✓ Database connection successful
@@ -179,7 +178,6 @@ Initializing database schema...
 Seeding categories...
 ✓ Categories seeded successfully
 Database migrations completed successfully!
-```
 
 ### Step 6 — Verify tables in pgAdmin
 
@@ -188,7 +186,6 @@ In pgAdmin navigate to:
 
 You should see these 11 tables:
 
-```
 categories
 event_attendees
 event_categories
@@ -200,7 +197,6 @@ spatial_ref_sys          ← created by PostGIS
 user_category_preferences
 user_preferences
 users
-```
 
 ### Step 7 — Reset PostgreSQL password (if needed)
 
@@ -290,7 +286,6 @@ npm start
 
 ### Expected startup output
 
-```
 ✓ Database connection successful
 Initializing application...
 ✓ Database schema initialized successfully
@@ -298,7 +293,6 @@ Seeding categories...
 ✓ Categories seeded successfully
 ✓ Server running on port 3000
 ✓ Environment: development
-```
 
 If Redis is running you will also see:
 
@@ -373,11 +367,10 @@ coverage/lcov-report/index.html
 
 ---
 
-### 🔐 AUTH APIs
+### AUTH APIs
 
 #### Register a new user
 
-```
 POST http://localhost:3000/api/auth/register
 Content-Type: application/json
 
@@ -387,9 +380,8 @@ Content-Type: application/json
   "firstName": "John",
   "lastName": "Doe"
 }
-```
 
-✅ Expected: `201 Created`
+Expected: `201 Created`
 
 ```json
 {
@@ -408,7 +400,6 @@ Content-Type: application/json
 
 #### Login
 
-```
 POST http://localhost:3000/api/auth/login
 Content-Type: application/json
 
@@ -416,26 +407,22 @@ Content-Type: application/json
   "email": "john@example.com",
   "password": "password123"
 }
-```
 
-✅ Expected: `200 OK` with token
+Expected: `200 OK` with token
 
 ---
 
 #### Get current user profile
 
-```
 GET http://localhost:3000/api/auth/me
 Authorization: Bearer <token>
-```
 
-✅ Expected: `200 OK` with user data including location coordinates
+Expected: `200 OK` with user data including location coordinates
 
 ---
 
 #### Update profile
 
-```
 PUT http://localhost:3000/api/auth/profile
 Authorization: Bearer <token>
 Content-Type: application/json
@@ -445,15 +432,13 @@ Content-Type: application/json
   "lastName": "Doe",
   "preferredLanguage": "en"
 }
-```
 
-✅ Expected: `200 OK`
+Expected: `200 OK`
 
 ---
 
 #### Update user location (sets PostGIS geography point)
 
-```
 PUT http://localhost:3000/api/auth/location
 Authorization: Bearer <token>
 Content-Type: application/json
@@ -462,7 +447,6 @@ Content-Type: application/json
   "latitude": 40.7128,
   "longitude": -74.0060
 }
-```
 
 ✅ Expected: `200 OK` with latitude/longitude returned
 
@@ -470,7 +454,6 @@ Content-Type: application/json
 
 #### Change password
 
-```
 POST http://localhost:3000/api/auth/change-password
 Authorization: Bearer <token>
 Content-Type: application/json
@@ -584,10 +567,8 @@ GET http://localhost:3000/api/events/search?q=tech
 
 #### Delete event (soft delete)
 
-```
-DELETE http://localhost:3000/api/events/<event_id>
+DELETE <http://localhost:3000/api/events/><event_id>
 Authorization: Bearer <token>
-```
 
 ✅ Expected: `200 OK`
 > Event is NOT removed from database — `is_active` is set to `false`
@@ -598,9 +579,7 @@ Authorization: Bearer <token>
 
 #### Get all categories (use IDs in other requests)
 
-```
-GET http://localhost:3000/api/categories
-```
+GET <http://localhost:3000/api/categories>
 
 ✅ Expected: `200 OK` with 10 categories including their UUIDs
 
@@ -608,15 +587,13 @@ GET http://localhost:3000/api/categories
 
 #### Set preferred categories
 
-```
-POST http://localhost:3000/api/users/categories
+POST <http://localhost:3000/api/users/categories>
 Authorization: Bearer <token>
 Content-Type: application/json
 
 {
   "categoryIds": ["<technology_category_id>", "<music_category_id>"]
 }
-```
 
 ✅ Expected: `200 OK`
 
@@ -624,10 +601,8 @@ Content-Type: application/json
 
 #### Get preferences
 
-```
-GET http://localhost:3000/api/users/preferences
+GET <http://localhost:3000/api/users/preferences>
 Authorization: Bearer <token>
-```
 
 ✅ Expected: `200 OK` with `search_radius_km`, `notification_enabled`, `preferredCategories`
 
@@ -636,7 +611,8 @@ Authorization: Bearer <token>
 #### Update preferences
 
 ```
-PUT http://localhost:3000/api/users/preferences
+
+PUT <http://localhost:3000/api/users/preferences>
 Authorization: Bearer <token>
 Content-Type: application/json
 
@@ -645,7 +621,6 @@ Content-Type: application/json
   "notification_enabled": true,
   "newsletters_enabled": false
 }
-```
 
 ✅ Expected: `200 OK`
 
@@ -654,8 +629,10 @@ Content-Type: application/json
 #### Add event to favorites
 
 ```
-POST http://localhost:3000/api/users/favorites/<event_id>
+
+POST <http://localhost:3000/api/users/favorites/><event_id>
 Authorization: Bearer <token>
+
 ```
 
 ✅ Expected: `201 Created`
@@ -665,10 +642,8 @@ Authorization: Bearer <token>
 
 #### Check if event is favorited
 
-```
-GET http://localhost:3000/api/users/favorites/<event_id>/check
+GET <http://localhost:3000/api/users/favorites/><event_id>/check
 Authorization: Bearer <token>
-```
 
 ✅ Expected: `200 OK`
 
@@ -691,10 +666,8 @@ Authorization: Bearer <token>
 
 #### Remove from favorites
 
-```
-DELETE http://localhost:3000/api/users/favorites/<event_id>
+DELETE <http://localhost:3000/api/users/favorites/><event_id>
 Authorization: Bearer <token>
-```
 
 ✅ Expected: `200 OK`
 
@@ -702,10 +675,8 @@ Authorization: Bearer <token>
 
 #### Register for event
 
-```
-POST http://localhost:3000/api/users/events/<event_id>/register
+POST <http://localhost:3000/api/users/events/><event_id>/register
 Authorization: Bearer <token>
-```
 
 ✅ Expected: `201 Created`
 ❌ If at capacity: `400 Bad Request`
@@ -715,10 +686,8 @@ Authorization: Bearer <token>
 
 #### Get events you are attending
 
-```
-GET http://localhost:3000/api/users/events/attending
+GET <http://localhost:3000/api/users/events/attending>
 Authorization: Bearer <token>
-```
 
 ✅ Expected: `200 OK` with events and attendance status
 
@@ -726,10 +695,8 @@ Authorization: Bearer <token>
 
 #### Unregister from event
 
-```
-DELETE http://localhost:3000/api/users/events/<event_id>/unregister
+DELETE <http://localhost:3000/api/users/events/><event_id>/unregister
 Authorization: Bearer <token>
-```
 
 ✅ Expected: `200 OK`
 
@@ -743,7 +710,7 @@ Authorization: Bearer <token>
 #### Create or update a review
 
 ```
-POST http://localhost:3000/api/reviews/<event_id>
+POST <http://localhost:3000/api/reviews/><event_id>
 Authorization: Bearer <token>
 Content-Type: application/json
 
@@ -761,7 +728,7 @@ Content-Type: application/json
 #### Get reviews for an event
 
 ```
-GET http://localhost:3000/api/reviews/<event_id>?limit=10&offset=0
+GET <http://localhost:3000/api/reviews/><event_id>?limit=10&offset=0
 ```
 
 ✅ Expected: `200 OK` with reviews array including reviewer names
@@ -771,7 +738,7 @@ GET http://localhost:3000/api/reviews/<event_id>?limit=10&offset=0
 #### Get review statistics
 
 ```
-GET http://localhost:3000/api/reviews/<event_id>/stats
+GET <http://localhost:3000/api/reviews/><event_id>/stats
 ```
 
 ✅ Expected: `200 OK`
@@ -815,10 +782,8 @@ GET http://localhost:3000/api/reviews/top-rated?limit=5
 
 #### Delete a review
 
-```
-DELETE http://localhost:3000/api/reviews/<review_id>
-Authorization: Bearer <token>
-```
+DELETE <http://localhost:3000/api/reviews/><review_id>
+Authorization: Bearer {{token}}
 
 ✅ Expected: `200 OK`
 ❌ If not author: `403 Forbidden`
@@ -829,10 +794,8 @@ Authorization: Bearer <token>
 
 #### Get notifications
 
-```
-GET http://localhost:3000/api/notifications
-Authorization: Bearer <token>
-```
+GET <http://localhost:3000/api/notifications>
+Authorization: Bearer {{token}}
 
 #### Get unread notifications only
 
@@ -905,7 +868,6 @@ Content-Type: application/json
 
 #### Test French (fr)
 
-```
 POST http://localhost:3000/api/auth/register
 Accept-Language: fr
 Content-Type: application/json
@@ -924,7 +886,6 @@ Content-Type: application/json
 
 #### Test German (de)
 
-```
 POST http://localhost:3000/api/auth/login
 Accept-Language: de
 Content-Type: application/json
